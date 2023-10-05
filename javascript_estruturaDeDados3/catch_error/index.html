@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Idade</title>
+</head>
+<body>
+  <h1>Calculadora de Idade</h1>
+  <label for="nome">Nome Completo:</label>
+  <input type="text" id="nome" required><br>
+  <label for="anoNascimento">Ano de Nascimento (1922-2021):</label>
+  <input type="text" id="anoNascimento" required><br>
+  <button id="calcularBtn">Calcular</button>
+  <div id="resultado"></div>
+
+  <script>
+    function getValidYear() {
+      while (true) {
+        const input = prompt("Digite o ano de nascimento (entre 1922 e 2021):");
+        const year = parseInt(input);
+
+        if (isNaN(year) || year < 1922 || year > 2021) {
+          alert("Ano inválido. Tente novamente.");
+        } else {
+          return year;
+        }
+      }
+    }
+
+    document.getElementById("calcularBtn").addEventListener("click", function () {
+      const nomeCompleto = document.getElementById("nome").value;
+      const anoNascimento = parseInt(document.getElementById("anoNascimento").value);
+
+      if (isNaN(anoNascimento) || anoNascimento < 1922 || anoNascimento > 2021) {
+        alert("Ano inválido. Digite um ano entre 1922 e 2021.");
+        return;
+      }
+
+      const anoAtual = 2022;
+      const idade = anoAtual - anoNascimento;
+
+      const resultadoDiv = document.getElementById("resultado");
+      resultadoDiv.innerHTML = `<p>Nome: ${nomeCompleto}</p><p>Idade em 2022: ${idade} anos</p>`;
+    });
+  </script>
+</body>
+</html>

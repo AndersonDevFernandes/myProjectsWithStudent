@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./index.js">
+  <title>PESQUISA DE CATEGORIA DE VEICULOS</title>
+</head>
+<body>
+  <header class="header">
+    <div class="logo"><img src="" alt=""></div>
+    <div class="menu">
+      <button class="navBtn">LOGUIN</button>
+      <button class="navBtn">REGISTRO</button>
+      <button class="navBtn">FAQ</button>
+    </div>
+  </header>
+  <p class="paragrafo">BEM VINDO AO CENTRO DE PESQUISA DE TRASNPORTES.</p>
+  <p class="welcome">Realizando qualidade de satisfação para melhor atender.</p>
+  <main class="mainContain">
+    <div class="container">
+      <form id="form1">
+          <p class=""> Prencha os campos para realizar a cadastro</p>
+          <p>Quantas rodas tem o veiculo ?</p>
+          <input list="wheels" name="wheels">
+            <datalist id="wheels">
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="6"></option>
+            <option value="6 +"></option>
+          </datalist>
+          <p>Quantidade de pessoas ?</p>
+          <input list="passengers" name="passengers">
+            <datalist id="passengers">
+            <option value="2"></option>
+            <option value="4"></option>
+            <option value="8 +"></option>
+          </datalist>
+          <p>Qual peso do veiculo ?</p>
+          <input list="weight" name="weight">
+            <datalist id="weight">
+            <option value="3500"></option>
+            <option value="6000"></option>
+            <option value="6000 +"></option>
+          </datalist>
+          
+          <!--<label> Quantas pessoas o veiculo suporta (motorista + passageiros) </label>
+          <input type="int" id="qntPessoas" placeholder="Número de pessoas"> 
+          <br>
+          <label> Quantas toneladas pesa o veiculo? </label>
+          <input type="int" id="peso" placeholder="Peso do Veículo">
+          <br>
+          <label> Qual seu peso? </label>
+          <input type="int" id="qtnRodas" placeholder="Quantas rodas">
+          <br>
+          <input type="submit" value="enviar" onclick="result">-->
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+   <p class="msgfter">Obrigado por responder a pesquisa</p>
+  </footer>
+</body>
+</html>
